@@ -1,0 +1,118 @@
+<app-nav></app-nav>
+<app-acceuil></app-acceuil>
+<app-desc></app-desc>
+
+<div class="container1">
+
+<h2 class="text-center pt-5 pb-5 titre3">Décoration</h2>
+
+
+<div class="row text-center">  
+<ng-container  *ngFor="let d of donne ">
+    <ng-container  *ngIf="d.categorie=='decoration '">
+
+    <div class="col-4">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    </ng-container>
+</ng-container>
+    </div>
+    <div class="text-center">
+        <button class="button3 mt-5">Show More</button>
+
+    </div>
+</div>
+    <img src="assets\image\pexels-tatiana-syrikova-3933240.jpg" class="img1">
+    <div class="container1">
+
+    <h2 class="text-center pt-5 pb-5 titre3">Meubles</h2>
+
+<div class="row text-center">  
+<ng-container  *ngFor="let d of donne ">
+    <ng-container  *ngIf="d.categorie=='meuble '">
+
+    <div class="col-4">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    </ng-container>
+</ng-container>
+    </div>
+    <div class="text-center text-center">
+        <button class="button3 mt-5">Show More</button>
+
+    </div>
+    </div>
+    <img src="assets\image\pexels-tatiana-syrikova-3933240.jpg" class="img2">
+
+
+    <div class="container1">
+
+    <h2 class="text-center pt-5 pb-5 titre3">Vêtements</h2>
+
+<div class="row text-center">  
+<ng-container  *ngFor="let d of donne ">
+    <ng-container  *ngIf="d.categorie=='vetement '">
+
+    <div class="col-4">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    </ng-container>
+</ng-container>
+    </div>
+    <div class="text-center">
+        <button class="button3 mt-5">Show More</button>
+
+    </div>
+
+
+</div>
+<img src="assets\image\pexels-ksenia-chernaya-3965557.jpg" class="img2">
+
+<div class="container1">
+
+
+    <h2 class="text-center pt-5 pb-5 titre3">Accessoires</h2>
+
+<div class="row text-center">  
+<ng-container  *ngFor="let d of donne ">
+    <ng-container  *ngIf="d.categorie=='accessoire '">
+
+    <div class="col-4">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    </ng-container>
+</ng-container>
+    </div>
+    <div class="text-center">
+        <button class="button3 mt-5">Show More</button>
+
+    </div>
+
+</div>
+<img src="assets\image\pexels-lisa-fotios-1090638.jpg" class="img2">
+
+<div class="container1">
+
+
+    <h2 class="text-center pt-5 pb-5 titre3">Meilleures Ventes</h2>
+
+<div class="row text-center">  
+<ng-container  *ngFor="let d of donne;let i=index ">
+    <ng-container  *ngIf="i<=3">
+
+
+    <div class="col-3">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+</ng-container>
+
+    </ng-container>
+
+    </div>
+    <div class="text-center">
+        <button class="button3 mt-5 mb-5">Show More</button>
+
+    </div>
+
+</div>
+<app-footers></app-footers>

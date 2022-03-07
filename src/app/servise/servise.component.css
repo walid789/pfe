@@ -1,0 +1,23 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+.titre{
+    letter-spacing: 2.45px;
+    font-size:55px;
+    color:black;
+    margin-right: 0px;
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+.ligne{
+    border: 2px solid #F7ACCF;
+    opacity: 1; 
+    width: 200px;
+    margin-left: 0px;
+}
+.container1{
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-right: 200px;
+}

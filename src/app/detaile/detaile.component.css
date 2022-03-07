@@ -1,0 +1,66 @@
+.grand{
+    width: 600px;
+    height: 800px;
+    object-fit: cover;
+}
+.container1{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+.titre{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: black;
+    font-weight:400;
+}
+.sous{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    
+}
+.form-control{
+ 
+    padding-left: 25px;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+    resize: none;
+    border-style:solid;
+}
+.form-control:focus{
+    border: 1px solid black;
+    color: black;
+    box-shadow: none !important;
+}
+.form-group{
+    padding-left: 0px;
+}
+.btn1 {
+    width: 80%;
+    left: 100px;
+    text-align: left;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 18px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    cursor: pointer;
+    font: normal normal medium 26px/32px Montserrat;
+    outline: inherit;
+    margin-left: 18px;
+    margin-top: 2rem;
+   
+}
+.titre1{
+    font-size: 25px;
+    text-transform: capitalize;
+    color: black;
+    font-weight:400; 
+}

@@ -1,0 +1,50 @@
+body {
+    padding-top:50px;
+}
+
+.box{
+    position: absolute;
+    top: 50%;   
+   left: 100px;
+}
+
+.photo{
+    width:100%;
+    height: 60rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.heading{
+color : black;
+text-align: left;
+font: normal normal 900 70px Montserrat;
+letter-spacing: 5.4px;
+}
+
+
+.btn1 {
+    left: 100px;
+    text-align: left;
+    background-color: #BF0015;
+    border: none;
+    color: white;
+    padding: 18px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    cursor: pointer;
+    font: normal normal medium 26px/32px Montserrat;
+    outline: inherit;
+   
+}
+
+
+.heading1{
+color : white;
+text-align: left;
+font: normal normal normal 25px/30px Montserrat;
+letter-spacing: 0.5px;
+}

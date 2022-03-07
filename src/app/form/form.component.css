@@ -1,0 +1,34 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+.button1 {
+    background-color: white;
+    border: 1px solid #000000;
+    color: black;
+    padding: 18px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button1:hover{
+      color:white;
+      background-color: black;
+  }
+  .container1{
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-right: 200px;
+}
+.titre{
+    font: normal normal 700 40px/48px Lato;
+    color:black;
+}
+.ligne{
+    border: 3px solid #F7ACCF;
+    background-color: #F7ACCF;
+    width: 150px;
+    margin-left: 0px;
+}

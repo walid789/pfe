@@ -1,0 +1,43 @@
+body {
+    padding-top:50px;
+}
+
+
+.nav-link {
+    text-align: left;
+
+    background-color:#FFFFFF;
+    color:#000000;
+    text-align: left;
+font: normal normal normal 23px/31px Segoe UI;
+    
+    
+}
+.navbar-brand{
+ margin-left: 6rem ;
+ margin-right: auto; 
+
+}
+.fa-user{
+    color: black;
+}
+.fa-shopping-cart{
+    color: black;
+ 
+}
+.container1{
+    padding-left: 50px;
+    padding-right: 20px;
+}
+.nav-link{
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 0px;
+}
+.p1{
+    margin-right: 20rem ;
+    margin-left: auto;
+}
+.im{
+    cursor: pointer;
+}

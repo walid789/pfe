@@ -1,0 +1,55 @@
+
+.box{
+    position: absolute;
+    top:140%;
+    left:40%;
+    right: 17%;
+}
+
+.img{
+    position: absolute;
+    top: 77%;
+    object-fit: cover;
+    height: 500px;
+    width: 70%;
+    object-position:  left center;
+}
+
+ .titre {
+    font: normal normal bold 38px/47px Montserrat;
+letter-spacing: 1.52px;
+color: #BD2132;
+}
+ .par {
+    font: normal normal normal 18px/25px Montserrat;
+    letter-spacing: 1.52px;
+color: black;
+font-weight: 500;
+
+
+}
+
+
+.btn1 {
+    left: 100px;
+    text-align: left;
+    background-color: #BD2132;
+    border: none;
+    color: white;
+    padding: 18px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    cursor: pointer;
+    font: normal normal medium 26px/32px Montserrat;
+    outline: inherit;
+}
+
+.bg{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+}
