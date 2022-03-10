@@ -8,9 +8,8 @@
 
 
 <div class="row text-center">  
-<ng-container  *ngFor="let d of donne ">
-    <ng-container  *ngIf="d.categorie=='decoration '">
-
+<ng-container  *ngFor="let d of donne ;let i=index ">
+    <ng-container  *ngIf="d.categorie=='decoration 'and i<=2">
     <div class="col-4">
         <app-welcome [dat]="d"></app-welcome>
     </div>
@@ -18,7 +17,7 @@
 </ng-container>
     </div>
     <div class="text-center">
-        <button class="button3 mt-5">Show More</button>
+        <button class="button3 mt-5"  [routerLink]="['/more','decoration']">Show More</button>
 
     </div>
 </div>
@@ -28,17 +27,18 @@
     <h2 class="text-center pt-5 pb-5 titre3">Meubles</h2>
 
 <div class="row text-center">  
-<ng-container  *ngFor="let d of donne ">
+<ng-container  *ngFor="let d of donne ;let i=index">
     <ng-container  *ngIf="d.categorie=='meuble '">
-
+    <ng-container *ngIf="i<5">
     <div class="col-4">
         <app-welcome [dat]="d"></app-welcome>
     </div>
     </ng-container>
+    </ng-container>
 </ng-container>
     </div>
     <div class="text-center text-center">
-        <button class="button3 mt-5">Show More</button>
+        <button class="button3 mt-5"  [routerLink]="['/more','meuble']">Show More</button>
 
     </div>
     </div>
@@ -50,17 +50,19 @@
     <h2 class="text-center pt-5 pb-5 titre3">Vêtements</h2>
 
 <div class="row text-center">  
-<ng-container  *ngFor="let d of donne ">
-    <ng-container  *ngIf="d.categorie=='vetement '">
+<ng-container  *ngFor="let d of donne ;let i=index">
+    <ng-container  *ngIf="d.categorie=='vetement 'and i<=2">
+      
 
     <div class="col-4">
         <app-welcome [dat]="d"></app-welcome>
     </div>
+ 
     </ng-container>
 </ng-container>
     </div>
     <div class="text-center">
-        <button class="button3 mt-5">Show More</button>
+        <button class="button3 mt-5"  [routerLink]="['/more','vetement']">Show More</button>
 
     </div>
 
@@ -74,17 +76,19 @@
     <h2 class="text-center pt-5 pb-5 titre3">Accessoires</h2>
 
 <div class="row text-center">  
-<ng-container  *ngFor="let d of donne ">
-    <ng-container  *ngIf="d.categorie=='accessoire '">
+<ng-container  *ngFor="let d of donne;let i=index ">
+    <ng-container  *ngIf="d.categorie=='accessoire ' and i<=2">
+   
 
     <div class="col-4">
         <app-welcome [dat]="d"></app-welcome>
     </div>
+
     </ng-container>
 </ng-container>
     </div>
     <div class="text-center">
-        <button class="button3 mt-5">Show More</button>
+        <button class="button3 mt-5"  [routerLink]="['/more','accessoire']">Show More</button>
 
     </div>
 
@@ -92,7 +96,6 @@
 <img src="assets\image\pexels-lisa-fotios-1090638.jpg" class="img2">
 
 <div class="container1">
-
 
     <h2 class="text-center pt-5 pb-5 titre3">Meilleures Ventes</h2>
 
@@ -110,7 +113,7 @@
 
     </div>
     <div class="text-center">
-        <button class="button3 mt-5 mb-5">Show More</button>
+        <button class="button3 mt-5 mb-5"  [routerLink]="['/more']">Show More</button>
 
     </div>
 

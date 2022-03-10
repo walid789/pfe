@@ -17,7 +17,10 @@ import { FootersComponent } from './footers/footers.component';
 import { HomeComponent } from './home/home.component';
 import { DetaileComponent } from './detaile/detaile.component'
 
-import { FormsModule } from "@angular/forms"; 
+import { FormsModule } from "@angular/forms";
+import { MoreComponent } from './more/more.component';
+import { LoginComponent } from './login/login.component';
+import { RegistreComponent } from './registre/registre.component'; 
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { FormsModule } from "@angular/forms";
     FootersComponent,
     HomeComponent,
     DetaileComponent,
+    MoreComponent,
+    LoginComponent,
+    RegistreComponent,
   ],
   imports: [
     BrowserModule,

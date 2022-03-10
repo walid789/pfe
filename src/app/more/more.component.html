@@ -1,0 +1,72 @@
+<app-nav></app-nav>
+<div class="container1">
+
+    <h2 class="text-center pt-5 pb-5 titre3">{{donne[0].categorie}}</h2>
+
+<div class="row text-center">  
+<ng-container  *ngFor="let d of donne ;let i=index">
+    <ng-container  *ngIf="i<=20">
+      
+    <div class="col-3">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    
+    </ng-container>
+</ng-container>
+<!-- a supprimer -->
+<ng-container  *ngFor="let d of donne ;let i=index">
+    <ng-container  *ngIf="i<=20">
+      
+    <div class="col-3">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    
+    </ng-container>
+</ng-container>
+<!-- a supprimer -->
+<ng-container  *ngFor="let d of donne ;let i=index">
+    <ng-container  *ngIf="i<=20">
+      
+    <div class="col-3">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    
+    </ng-container>
+</ng-container>
+<!-- a supprimer -->
+<ng-container  *ngFor="let d of donne ;let i=index">
+    <ng-container  *ngIf="i<=20">
+      
+    <div class="col-3">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    
+    </ng-container>
+</ng-container>
+<!-- a supprimer -->
+<ng-container  *ngFor="let d of donne ;let i=index">
+    <ng-container  *ngIf="i<=20">
+      
+    <div class="col-3">
+        <app-welcome [dat]="d"></app-welcome>
+    </div>
+    
+    </ng-container>
+</ng-container>
+</div>
+<div class="centre">
+<div class="btn-toolbar mt-3 " >
+    <div class="btn-group  ">
+        <button type="button" class="btn btn-secondary">PREV</button>
+      <button type="button" class="btn btn-secondary">1</button>
+      <button type="button" class="btn btn-secondary">2</button>
+      <button type="button" class="btn btn-secondary">3</button>
+      <button type="button" class="btn btn-secondary">NEXT</button>
+        </div>
+    
+    </div>
+    </div>
+</div>
+<app-footers></app-footers>
+  
+

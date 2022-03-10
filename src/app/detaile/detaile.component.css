@@ -1,6 +1,6 @@
 .grand{
     width: 600px;
-    height: 800px;
+    height: 700px;
     object-fit: cover;
 }
 .container1{
@@ -55,7 +55,7 @@
     font: normal normal medium 26px/32px Montserrat;
     outline: inherit;
     margin-left: 18px;
-    margin-top: 2rem;
+    margin-top: 1rem;
    
 }
 .titre1{
@@ -63,4 +63,9 @@
     text-transform: capitalize;
     color: black;
     font-weight:400; 
+}
+.sous_image{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
 }
