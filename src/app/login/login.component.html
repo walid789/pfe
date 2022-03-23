@@ -2,20 +2,21 @@
 <div class="container">
     <h2 class="text-center pt-5 pb-5 titre3">CUSTOMER ZONE</h2>
     
-    <form >
+  
         <div class="par5" >Email address</div>
         <div class="form-group col-6 ">
-            <input type="email" #objet class="form-control ml-0 " id="inputobjet" >
+            <input type="email" [(ngModel)] = "mail" class="form-control ml-0 "  >
           </div>
           <div class="par5">Password</div>
           <div class="form-group col-6 ">
-              <input type="password" #objet class="form-control ml-0" id="inputobjet"  >
+              <input type="password" [(ngModel)]= "pass" class="form-control ml-0" [ngModelOptions]="{standalone: true}"  >
             </div>
-            <button type="button"  class="btn1 ">LOG IN</button>
+            <button type="button"  class="btn1" (click)="verif()">LOG IN</button>
             <div class="par4 pt-3" > froget your password ?</div>
             <div class="par4" [routerLink]="['/signup']"> Not our registered customer yet?</div>
 
-        </form>
+       
+        
       
 </div>
 

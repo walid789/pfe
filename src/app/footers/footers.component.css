@@ -11,7 +11,7 @@
 }
 .par{
     padding-right: 0px;
-font: normal normal normal 15px/20px Montserrat;
+font: normal normal normal 15px/20px ;
 letter-spacing: 0px;
 color: #707070;
 transition: 0.5s;
@@ -23,9 +23,7 @@ cursor: pointer;
 padding-left: 10px;
 
 }
-*{
-    font-family: 'Lato', sans-serif;
-}
+
 .button1 {
     background-color:#F5F5F5 ;
     border: 1px solid #000000;
@@ -46,8 +44,9 @@ padding-left: 10px;
   }
  
 .titre1{
-    font: normal normal 700 40px/48px Lato;
+    font-size: 35px;
     color:black;
+    font-weight: bold;
 }
 
 .form-control{

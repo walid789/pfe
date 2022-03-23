@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,17 @@ import { HttpClient } from '@angular/common/http';
 export class AjouterService {
 
   constructor(private http: HttpClient) { }
-  create(data:any) {
-    console.log(data);
+
+  ajouterPanier(data:any) :Observable<any> {
+    return this.http.post('/api/addPanier/', data);
+    }
+
+  create(data:any) :Observable<any>{
+  
     return this.http.post('/api/addUser/', data);
   }
+
+
+
+ 
 }

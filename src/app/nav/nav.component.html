@@ -1,4 +1,4 @@
-<header class="navbar navbar-brigh1 navbar-fixed-top" role="banner">
+<header class="navbar navbar-brigh1 navbar-fixed-top  border-bottom" role="banner">
 
     
       <a class="navbar-brand" href="#">
@@ -9,30 +9,29 @@
     <ul class="nav justify-content-end">
       
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page"  [routerLink]="['/accueil']">A Propres</a>
+        <a class="nav-link active" aria-current="page"  [routerLink]="['/accueil']" >A Propres</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/more','decoration']">Décoration</a> 
+        <a class="nav-link"  href="/more/decoration">Décoration</a> 
   
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/more','meuble']">Meubles</a> 
-  
+        <a class="nav-link"  href="/more/meuble">Meubles</a> 
       </li>
       
     
       <li class="nav-item">
-        <a class="nav-link"  [routerLink]="['/more','vetement']">Vêtements</a> 
+        <a class="nav-link"   href="/more/vetement">Vêtements</a> 
   
       </li>
       <li class="nav-item">
-        <a class="nav-link p1 " [routerLink]="['/more','accessoire']">Accessoires </a> 
+        <a class="nav-link p1 "  href="/more/accessoire">Accessoires </a> 
   
       </li>
       
       
       <li class="nav-item ">
-        <a class="nav-link" ><img class="im"src="assets\image\shopping-cart.svg"></a> 
+        <a class="nav-link" ><img class="im" [routerLink]="['/panier']" src="assets\image\shopping-cart.svg"></a> 
       </li>
       
       <li class="nav-item mr-5">

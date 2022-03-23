@@ -20,7 +20,9 @@ import { DetaileComponent } from './detaile/detaile.component'
 import { FormsModule } from "@angular/forms";
 import { MoreComponent } from './more/more.component';
 import { LoginComponent } from './login/login.component';
-import { RegistreComponent } from './registre/registre.component'; 
+import { RegistreComponent } from './registre/registre.component';
+import { PanierComponent } from './panier/panier.component';
+import { DashbordComponent } from './dashbord/dashbord.component'; 
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { RegistreComponent } from './registre/registre.component';
     MoreComponent,
     LoginComponent,
     RegistreComponent,
+    PanierComponent,
+    DashbordComponent,
   ],
   imports: [
     BrowserModule,

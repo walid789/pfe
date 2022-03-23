@@ -15,7 +15,7 @@ export class RegistreComponent implements OnInit {
   constructor(private service:AjouterService) { }
 
   ngOnInit(): void {
-   console.log("heloo");
+ 
   }
   ajouter(){
     this.user = 

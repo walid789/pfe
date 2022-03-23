@@ -1,7 +1,10 @@
 <app-nav></app-nav>
 <div class="container">
     <h2 class="text-center pt-5 pb-5 titre3">CUSTOMER ZONE</h2>
-    
+    <div class="par5" >Name</div>
+            <div class="form-group col-6 ">
+                <input type="text" #objet class="form-control ml-0 " id="inputobjet"[(ngModel)] = "name" >
+              </div>
   
         <div class="par5" >Phone Number</div>
         <div class="form-group col-6 ">
@@ -16,10 +19,7 @@
           <div class="form-group col-6 ">
               <input type="password" #objet class="form-control ml-0" id="inputobjet" [(ngModel)] = "password" >
             </div>
-            <div class="par5" >name</div>
-            <div class="form-group col-6 ">
-                <input type="text" #objet class="form-control ml-0 " id="inputobjet"[(ngModel)] = "name" >
-              </div>
+            
             
             <button   class="btn1 "  (click)="ajouter()" >REGISTRE</button>
            

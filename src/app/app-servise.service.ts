@@ -11,4 +11,13 @@ export class AppServiseService {
   getData(){
    return this.http.get('/api/getData')
   }
+  getPanier(data:any){
+    return this.http.post('/api/getPanier/',data)
+  }
+  getUser(data:any){
+    return this.http.post('/api/getUser/',data)
+  }
+  DeletPanier(data:any){
+    return this.http.post('/api/DeletPanier/',data)
+  }
 }
