@@ -10,6 +10,6 @@ export class DashbordComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  alert("heloo");
   }
-
 }

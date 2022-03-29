@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { RegistreComponent } from './registre/registre.component'; 
 import { PanierComponent } from './panier/panier.component'; 
 import { DashbordComponent } from './dashbord/dashbord.component'; 
+import { ExempleComponent } from './exemple/exemple.component';
+import { AjouterComponent } from './ajouter/ajouter.component'; 
+
 
 const routes: Routes = [
   {path:'accueil', component:HomeComponent},
@@ -16,6 +19,8 @@ const routes: Routes = [
   {path:'signup', component:RegistreComponent},
   {path:'panier', component:PanierComponent},
   {path:'dashbord', component:DashbordComponent},
+   {path:'exmp', component:ExempleComponent},
+   {path:'ajouter', component:AjouterComponent},
   {path:'', redirectTo:'accueil', pathMatch:'full'},
 
 ];

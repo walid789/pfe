@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DeatileService } from '../deatile.service';
 import { ActivatedRoute } from '@angular/router';
 import { AjouterService } from '../ajouter.service';
+import {Router} from '@angular/router';
   
 @Component({
   selector: 'app-detaile',
@@ -22,7 +23,7 @@ export class DetaileComponent implements OnInit {
   mat:string="";
   quanite:number=0;
   
-  constructor(private service:DeatileService,private activatedRoute:ActivatedRoute,private service1:AjouterService) {
+  constructor(private service:DeatileService,private activatedRoute:ActivatedRoute,private service1:AjouterService,private router:Router) {
 
    }
 
@@ -65,10 +66,11 @@ export class DetaileComponent implements OnInit {
        console.log(this.panier) 
         this.service1.ajouterPanier(this.panier).subscribe((Response)=>{
           console.log("panier ajouter")
+          this.router.navigate(['/panier']);
          },(error)=>{console.log("eroor is ",error)}
        
          )
-         console.log(this.donne+'hhh');
+         this.router.navigate(['/panier']);
       }
 
 }

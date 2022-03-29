@@ -17,6 +17,12 @@ export class AjouterService {
   
     return this.http.post('/api/addUser/', data);
   }
+  ajouterimage(file:any){
+    return this.http.post('/api/addImage/', file);
+  }
+  ajouterProduit(data:any){
+    return this.http.post('/api/addProduit/', data);
+  }
 
 
 

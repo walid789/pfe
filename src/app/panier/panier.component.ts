@@ -33,6 +33,7 @@ export class PanierComponent implements OnInit {
     }
     },(error)=>{console.log("eroor is ",error)}
     )
+   
       }
 
 supp(){
@@ -45,6 +46,6 @@ supp(){
       console.log("reponse from api",Response)
     },(error)=>{console.log("eroor is ",error)}
     )
-      
+    location.reload();  
 }
 }

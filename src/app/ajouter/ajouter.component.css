@@ -1,0 +1,71 @@
+.titre3{
+    letter-spacing: 1.9px;
+color: #000000;
+text-transform: uppercase;
+font-size:45px;
+font-weight: bold;
+}
+.form-control{
+    background-color: white;
+    padding-left: 30px;
+    color: black;
+   /* padding-top: 15px;
+    padding-bottom: 15px;*/
+    resize: none;
+    border-style:solid;
+    border-radius: 0px;
+}
+.form-control:focus{
+    border: 1px solid black;
+    color: black;
+    box-shadow: none !important;
+}
+.form-group{
+    padding-left: 0px;
+}
+.btn1 {
+    width: 49%;
+    left: 100px;
+    text-align: left;
+    background-color:#0069D9;
+    border: none;
+    color: white;
+    padding: 18px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    cursor: pointer;
+    font: normal normal medium 26px/32px Montserrat;
+    outline: inherit;
+    margin-left: 0px;
+    margin-top: 1rem;
+   
+}
+.par5{
+    color:#868e96;
+    padding-bottom: 0.5rem;
+}
+.par4{
+    color:#868e96;
+    padding-bottom: 1rem;
+    transition: 0.4s;
+}
+.par4:hover{
+    color:black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.uploadButton{
+    display:none;
+  }
+  .uploadLabel {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+  
+    background-color: black;
+    color: #ffffff;
+  }

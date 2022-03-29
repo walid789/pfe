@@ -22,7 +22,10 @@ import { MoreComponent } from './more/more.component';
 import { LoginComponent } from './login/login.component';
 import { RegistreComponent } from './registre/registre.component';
 import { PanierComponent } from './panier/panier.component';
-import { DashbordComponent } from './dashbord/dashbord.component'; 
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { AjouterComponent } from './ajouter/ajouter.component'; 
+
+
 
 
 @NgModule({
@@ -45,13 +48,19 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     RegistreComponent,
     PanierComponent,
     DashbordComponent,
+    AjouterComponent,
+    
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GoogleMapsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
+
   
   ],
   providers: [],

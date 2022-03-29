@@ -1,0 +1,110 @@
+<div class="container">
+    <h2 class="text-center pt-5 pb-5 titre3">AJOUTER UN PRODUIT </h2>
+    <div class="row">
+        <div class="col-6">
+            <div class="par5" >Name</div>
+            <div class="form-group col-12 ">
+                <input type="text" #objet class="form-control ml-0 " [(ngModel)] = "name" >
+              </div>
+        </div>
+        <div class="col-6">
+
+            <div class="par5" >prix</div>
+            <div class="form-group col-12 ">
+                <input type="number" class="form-control ml-0 " [(ngModel)] = "prix" ><!--[(ngModel)] = "phone"-->
+              
+              </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="par5" >Dimantion </div>
+            <div class="form-group col-12 ">
+                <input type="text" #objet class="form-control ml-0 " [(ngModel)] = "dim">
+              </div>
+        </div>
+        <div class="col-6">
+
+            <div class="par5" >matriel</div>
+            <div class="form-group col-12 ">
+                <input type="text" class="form-control ml-0 " [(ngModel)] = "mat"  ><!--[(ngModel)] = "phone"-->
+              
+              </div>
+              
+        </div>
+    </div>
+   
+
+  
+        <div class="form-group">
+    <label class="par5">Chosir Un categorie</label>
+    <select class="form-control" (change)="onChange($event.target)">
+      <option>vetement </option>
+      <option >meuble </option>
+      <option>decoration </option>
+  <option>accessoire </option>
+    </select>
+  </div>
+
+<div class="d-flex justify-content-around mt-5">
+              <div>
+  <label class="uploadLabel mr-3">
+    <input type="file" #fileInput class="uploadButton" (change)="fn('fileInput')">
+    <i class="fa fa-folder" style="padding-right: 10px;"  ></i> chosire image principale 
+  </label>
+  <button type="button" class="btn btn-primary" (click)="onfile()"><i class="fa fa-check" style="padding-right: 10px;"></i>Save </button>
+  <div *ngIf="url !='' ">
+      
+    <img src="{{url}}" width="280px" height="200px" style="object-fit: cover;" >
+</div>
+              </div>
+<div>
+  <label class="uploadLabel mr-3">
+    <input type="file" #fileInput1 class="uploadButton" (change)="fn('fileInput1')" >
+    <i class="fa fa-folder" style="padding-right: 10px;" ></i> chosire image secondaire 1 
+  </label>
+  <button type="button" class="btn btn-primary" (click)="onfile1()"><i class="fa fa-check" style="padding-right: 10px;"></i>Save </button>
+  <div *ngIf="url1 !='' ">
+    <img src="{{url1}}" width="295px" height="200px" style="object-fit: cover;">
+</div>
+</div>
+</div>
+<div class="d-flex justify-content-around mt-5">
+    <div>
+  <label class="uploadLabel mr-3">
+    <input type="file" #fileInput2 class="uploadButton"  (change)="fn('fileInput2')" >
+    <i class="fa fa-folder" style="padding-right: 10px;" ></i> chosire image secondaire 2 
+  </label>
+  <button type="button" class="btn btn-primary" (click)="onfile2()"> <i class="fa fa-check" style="padding-right: 10px;"></i>Save </button>
+  <div *ngIf="url2 !='' ">
+    <img src="{{url2}}" width="295px" height="200px" style="object-fit: cover;">
+</div>
+</div>
+<div>
+
+  <label class="uploadLabel mr-3">
+    <input type="file" #fileInput3 class="uploadButton"  (change)="fn('fileInput3')" >
+    <i class="fa fa-folder" style="padding-right: 10px;" ></i>  chosire image secondaire 3
+  </label>
+  <button type="button" class="btn btn-primary" (click)="onfile3()"><i class="fa fa-check" style="padding-right: 10px;"></i> Save </button>
+  <div *ngIf="url3 !='' ">
+    <img src="{{url3}}" width="298px" height="200px" style="object-fit: cover;">
+</div>
+</div>
+</div>
+<div class="text-center pt-5">
+  <label class="uploadLabel mr-3">
+    <input type="file" #fileInput4 class="uploadButton"  (change)="fn('fileInput4')">
+    <i class="fa fa-folder" style="padding-right: 10px;" ></i>   chosire image secondaire 4
+  </label>
+  <button type="button" class="btn btn-primary" (click)="onfile4()"> <i class="fa fa-check" style="padding-right: 10px;"></i> Save </button>
+  <div *ngIf="url4 !='' ">
+    <img src="{{url4}}" width="298px" height="200px" style="object-fit: cover;">
+</div>
+</div>
+            <br>
+            <button   class="btn1 " (click)="ajouterProduit()"  >Ajouter un Produit</button>
+            <button   class="btn1 "  style="background-color: white; border: 1px solid #0069D9; color:#0069D9" >Annuler</button>
+
+</div>

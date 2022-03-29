@@ -16,6 +16,7 @@ donne:any
   constructor(private servise:AppServiseService,private router:Router) { }
 
   ngOnInit(): void {
+    
   }
 
 
@@ -44,6 +45,5 @@ this.servise.getUser(this.user).subscribe((Response)=>{
  },(error)=>{console.log("eroor is ",error)}
 
  )
-
 }
 }
