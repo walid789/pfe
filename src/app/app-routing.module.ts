@@ -9,6 +9,8 @@ import { PanierComponent } from './panier/panier.component';
 import { DashbordComponent } from './dashbord/dashbord.component'; 
 import { ExempleComponent } from './exemple/exemple.component';
 import { AjouterComponent } from './ajouter/ajouter.component'; 
+import { ModifierComponent } from './modifier/modifier.component'; 
+
 
 
 const routes: Routes = [
@@ -20,7 +22,8 @@ const routes: Routes = [
   {path:'panier', component:PanierComponent},
   {path:'dashbord', component:DashbordComponent},
    {path:'exmp', component:ExempleComponent},
-   {path:'ajouter', component:AjouterComponent},
+   {path:'dashbord/ajouter', component:AjouterComponent},
+   {path:'modifier/:id', component:ModifierComponent},
   {path:'', redirectTo:'accueil', pathMatch:'full'},
 
 ];

@@ -23,8 +23,13 @@ import { LoginComponent } from './login/login.component';
 import { RegistreComponent } from './registre/registre.component';
 import { PanierComponent } from './panier/panier.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
-import { AjouterComponent } from './ajouter/ajouter.component'; 
+import { AjouterComponent } from './ajouter/ajouter.component';
+import { ModifierComponent } from './modifier/modifier.component'; 
 
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TabProduitComponent } from './tab-produit/tab-produit.component';
+import { TabCommandeComponent } from './tab-commande/tab-commande.component';
 
 
 
@@ -49,6 +54,9 @@ import { AjouterComponent } from './ajouter/ajouter.component';
     PanierComponent,
     DashbordComponent,
     AjouterComponent,
+    ModifierComponent,
+    TabProduitComponent,
+    TabCommandeComponent,
     
 
 
@@ -59,6 +67,9 @@ import { AjouterComponent } from './ajouter/ajouter.component';
     GoogleMapsModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
+
 
 
   

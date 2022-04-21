@@ -8,6 +8,40 @@ import { AjouterService } from '../ajouter.service';
   styleUrls: ['./ajouter.component.css']
 })
 export class AjouterComponent implements OnInit {
+     image:string="";
+     image1:string="";
+     image2:string="";
+     image3:string="";
+     image4:string="";
+
+  onselect(e:any,ch:string){
+       if (e.target.files){
+         var reader=new FileReader();
+         reader.readAsDataURL(e.target.files[0])
+         reader.onload=(event:any)=>{
+           if (ch=="image"){
+           this.image=event.target.result;
+           }
+           if (ch=="image1"){
+            this.image1=event.target.result;
+            }
+            if (ch=="image2"){
+              this.image2=event.target.result;
+              }
+              if (ch=="image3"){
+                this.image3=event.target.result;
+                }
+                if (ch=="image4"){
+                  this.image4=event.target.result;
+                  }
+           
+         }
+       }
+  }
+
+   
+
+
   @ViewChild('fileInput', { static: false })
   fileInput!: ElementRef;
   @ViewChild('fileInput1', { static: false })
@@ -16,7 +50,6 @@ export class AjouterComponent implements OnInit {
   fileInput2!: ElementRef;
   @ViewChild('fileInput3', { static: false })
   fileInput3!: ElementRef;
- 
   @ViewChild('fileInput4', { static: false })
   fileInput4!: ElementRef;
 
@@ -33,6 +66,7 @@ export class AjouterComponent implements OnInit {
   prix:number=0;
   selcted:any;
   produit:any;
+  quanite:number=0;
 
 
   constructor(private service: AjouterService) { }
@@ -42,6 +76,7 @@ export class AjouterComponent implements OnInit {
 
   ajouterProduit(){
    this.produit={
+    quanite:this.quanite,
      nom:this.nom,
      mat:this.mat,
     dim:this.dim,
@@ -63,146 +98,56 @@ export class AjouterComponent implements OnInit {
   }
 
 
-fn(ch:any){
-  var imageblob:any;
-  if (ch=="fileInput"){
-     imageblob=this.fileInput.nativeElement.files[0];
-  }
-  if(ch=="fileInput1"){
-    imageblob=this.fileInput1.nativeElement.files[0];
-  }
-  if(ch=="fileInput2"){
-    imageblob=this.fileInput2.nativeElement.files[0];
-  }
-  if(ch=="fileInput3"){
-    imageblob=this.fileInput3.nativeElement.files[0];
-  }
-  if(ch=="fileInput4"){
-    imageblob=this.fileInput4.nativeElement.files[0];
-  }
- 
-  const i:number=imageblob.type.indexOf('/');
 
-  var sliced = imageblob.type.substr(i+1, 10); 
 
-  console.log(imageblob.type);
-  var i1:number=imageblob.name.indexOf('.');
-
-  var newstr = imageblob.name.slice(0,i1); 
-  if(ch=="fileInput"){
-    this.url="\\assets\\image\\"+newstr+'.'+sliced;
-  }
-  if(ch=="fileInput1"){
-    this.url1="\\assets\\image\\"+newstr+'.'+sliced;
-  }
-  if(ch=="fileInput2"){
-    this.url2="\\assets\\image\\"+newstr+'.'+sliced;
-  }
-  if(ch=="fileInput3"){
-    this.url3="\\assets\\image\\"+newstr+'.'+sliced;
-  }
-  if(ch=="fileInput4"){
-    this.url4="\\assets\\image\\"+newstr+'.'+sliced;
-  }
-  }
- 
   ngOnInit(): void {
     
   }
-  onfile(){
-    const imageblob=this.fileInput.nativeElement.files[0];
+
+  Concat(imageblob:any){
+    const i:number=imageblob.type.indexOf('/');
+    var type = imageblob.type.substr(i+1, 10); 
+    var i1:number=imageblob.name.indexOf('.');
+    var nom = imageblob.name.slice(0,i1); 
+    var tab=[type,nom]
+    return tab;
+   }
+
+  fn(ch:any){
+    var imageblob:any;
+    if (ch=="fileInput"){
+       imageblob=this.fileInput.nativeElement.files[0];
+       var tab= this.Concat(imageblob);
+       this.url="\\assets\\image\\"+tab[0]+'.'+tab[1];
+    }
+    if(ch=="fileInput1"){
+      imageblob=this.fileInput1.nativeElement.files[0];
+      var tab= this.Concat(imageblob);
+      this.url1="\\assets\\image\\"+tab[0]+'.'+tab[1];
+    }
+    if(ch=="fileInput2"){
+      imageblob=this.fileInput2.nativeElement.files[0];
+      var tab= this.Concat(imageblob);
+      this.url2="\\assets\\image\\"+tab[0]+'.'+tab[1];
+    }
+    if(ch=="fileInput3"){
+      imageblob=this.fileInput3.nativeElement.files[0];
+      var tab= this.Concat(imageblob);
+      this.url3="\\assets\\image\\"+tab[0]+'.'+tab[1];
+    }
+    if(ch=="fileInput4"){
+      imageblob=this.fileInput4.nativeElement.files[0];
+      var tab= this.Concat(imageblob);
+      this.url4="\\assets\\image\\"+tab[0]+'.'+tab[1];
+    }
+
     const file =new FormData();
     file.set('file',imageblob);
-
-    
     this.service.ajouterimage(file).subscribe((Response)=>{
       console.log(Response);
      },(error)=>{console.log("eroor is ",error)}
    
      )
-  }
+    }
  
-
-  onfile1(){
-    const imageblob=this.fileInput1.nativeElement.files[0];
-    const file =new FormData();
-    file.set('file',imageblob);
-
-    
-    this.service.ajouterimage(file).subscribe((Response)=>{
-      console.log(Response);
-     },(error)=>{console.log("eroor is ",error)}
-   
-     )
-  }
-  onfile2(){
-    const imageblob=this.fileInput2.nativeElement.files[0];
-    const file =new FormData();
-    file.set('file',imageblob);
-    const i:number=imageblob.type.indexOf('/');
-
-    var sliced = imageblob.type.substr(i+1, 10); 
-  
-    console.log(imageblob.type);
-    var i1:number=imageblob.name.indexOf('.');
-
-    var newstr = imageblob.name.slice(0,i1); 
-
-    this.url2="\\assets\\image\\"+newstr+'.'+sliced;
-     
-    console.log(this.url2);
-    
-    this.service.ajouterimage(file).subscribe((Response)=>{
-      console.log(Response);
-     },(error)=>{console.log("eroor is ",error)}
-   
-     )
-  }
-  onfile3(){
-    const imageblob=this.fileInput3.nativeElement.files[0];
-    const file =new FormData();
-    file.set('file',imageblob);
-    const i:number=imageblob.type.indexOf('/');
-
-    var sliced = imageblob.type.substr(i+1, 10); 
-  
-    console.log(imageblob.type);
-    var i1:number=imageblob.name.indexOf('.');
-
-    var newstr = imageblob.name.slice(0,i1); 
-
-    this.url3="\\assets\\image\\"+newstr+'.'+sliced;
-     
-    console.log(this.url3);
-    
-    this.service.ajouterimage(file).subscribe((Response)=>{
-      console.log(Response);
-     },(error)=>{console.log("eroor is ",error)}
-   
-     )
-  }
-
-  onfile4(){
-    const imageblob=this.fileInput4.nativeElement.files[0];
-    const file =new FormData();
-    file.set('file',imageblob);
-    const i:number=imageblob.type.indexOf('/');
-
-    var sliced = imageblob.type.substr(i+1, 10); 
-  
-    console.log(imageblob.type);
-    var i1:number=imageblob.name.indexOf('.');
-
-    var newstr = imageblob.name.slice(0,i1); 
-
-    this.url4="\\assets\\image\\"+newstr+'.'+sliced;
-     
-    console.log(this.url4);
-    
-    this.service.ajouterimage(file).subscribe((Response)=>{
-      console.log(Response);
-     },(error)=>{console.log("eroor is ",error)}
-   
-     )
-  }
 }

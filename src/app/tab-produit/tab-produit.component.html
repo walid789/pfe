@@ -1,0 +1,100 @@
+<div class="container col-9">
+
+ 
+                    <div class="card  border-0 rounded ">
+                        <div class="card-header border-0" style="background-color: white;" >
+                            <div class="row">
+                            <h4 class="card-title mt-0 col-8"> Produit</h4>
+                                <button type="button" class="btn btn-outline-primary mt-0 col-3" routerLink="/dashbord/ajouter" ><i class="fa fa-plus"></i> Add</button>
+
+</div>          
+
+            
+</div>
+    <div class="card-body">
+     
+            <table class="table table-hover">
+                <thead class="">
+                    <th>
+                        Name & categorie  
+                    </th>
+
+                    <th>
+                    Prix
+                    </th>
+                    <th>
+                        stocke
+                    </th>
+                    <th>
+                        matriel
+                    </th>
+                    <th>
+                        dimantion 
+                    </th>
+                    <th>
+                        Action
+
+                    </th>
+
+                
+                </thead>
+               
+                    <tbody>
+                        <ng-container *ngFor="let t of donne">
+                     
+                        <tr>
+                            <td>
+                        <div class="row">
+                        <div class="col-3">
+                           
+                        <span><img src={{t.image}}
+                            alt="" width="50px" height="50ox" />  
+                            
+                            </span>
+                       
+                        </div>
+                            <div class="col-4">
+                                <a class="titre1 " style="     font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                " > {{t.nom}} </a>
+                            
+                        <br> <a class="titre2" style="color: gray;">{{t.categorie}}  </a></div>
+                        </div>
+                    
+                    </td>
+                    <td>
+                    {{t.prix}}
+
+                    </td>                                           
+                    <td>
+                       {{t.stoke}} 
+
+                    </td>
+                    <td>
+                        {{t.matriel}}
+
+                    </td>
+                
+                    <td>
+                       {{ t.dim}}
+                    </td>
+                    <td>
+                    <div class="row">                                               
+                        <button class="btn2 btn-outline-warning " routerLink="/modifier/{{t.id}}"><i class="fa fa-refresh" ></i></button>
+                        <button class="btn3 btn-outline-danger"><i class="fa fa-trash"></i></button>
+                        
+                        </div>
+                    </td>
+                </tr>
+                
+            </ng-container>
+            
+            </tbody>
+            
+        </table>
+                    </div>
+                </div>
+            </div>
+
+  
+
+

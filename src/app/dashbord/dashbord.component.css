@@ -1,3 +1,35 @@
-body{
-    background-color: aquamarine;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.titre{
+    color:#2C7BE5;
+}
+.titre1{
+    color:grey;
+}
+
+.href1{
+    text-align: right;
+    background-color: #FDE6D8;
+}
+.href2{
+    text-align: right;
+ 
+}
+.href3{
+    text-align: right;
+  
+}
+.pp1{
+    background-color: #FDE6D8;
+
+}
+.img{
+    object-fit: cover;
+    position: relative;
+    top:-25px;
+   
 }

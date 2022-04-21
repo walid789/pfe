@@ -1,0 +1,147 @@
+<div class="container col-9">
+
+<div class="row">
+
+<div class="col-md-12">
+<div class="card card-plain border-0 rounded">
+<div class="card-header " style="background-color: white;">
+    <h4 class="card-title mt-0"> Commande</h4>
+    
+</div>
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="">
+                <th>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3"></label>
+                    Customer
+                    </div>
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Payement
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    quanite
+                </th>
+                <th>
+                    total
+                </th>
+                <th>
+
+                </th>
+            </thead>
+            <tbody>
+                
+                <ng-container *ngFor="let b of tab2;let i =index">
+                  
+                <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                            <label class="custom-control-label" for="customCheck1">
+                                <a href="name">  {{tab1[i][0][0].nom}}</a>
+                                </label>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        {{tab1[i][0][0].mail}}
+
+                    </td>                                           
+                    <td>
+                          
+                        {{b[0][0].nom}}
+                    </td>
+                    <td>
+                        <ng-container *ngIf="donne[i].Payement=='Pending'">
+                            <span class="badge badge-primary">Pending</span>
+                    </ng-container>
+                    <ng-container *ngIf="donne[i].Payement=='Success'">
+                        <span class="badge badge-success">Success</span>
+                    </ng-container>
+                    <ng-container *ngIf="donne[i].Payement=='Blocked'">
+                        <span class="badge badge-danger">Blocked</span>
+                    </ng-container>
+
+                    </td>
+                    
+                    <td>
+                        {{b[0][0].prix}}
+                    </td>
+                     
+                       
+                   
+                   
+                    <td>
+                        {{donne[i].quantite}}
+                    </td>
+                    <td>
+                        {{donne[i].quantite * b[0][0].prix}}
+                    </td>
+                    <td >
+                        <div class="dropdown">
+                            <span class="dote">...</span>
+                            <div class="dropdown-content"> 
+                                <a  href="#" class="c5">View en detail </a>
+
+                                <br>  <a  href="#" class="c5">succes </a>
+                                <br>  <a  href="#" class="c5">pannding</a>
+                                <br>  <a  href="#" class="c5">blocked</a>
+                                
+                
+                            <div class="dropdown-divider"></div>
+                                <a  href="#" class="c4">Delete</a>
+                                
+                        
+                            
+
+                                </div>
+                        </div>
+                        </td>
+                </tr>
+               
+                </ng-container>
+          
+            </tbody>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <button type="button" class="btn1 btn-primary btn-sm">Preview</button>
+
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm">   Next   </button>
+
+                </td>
+
+                
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+                </div>
+    
+            </div>
+        </div>
+    

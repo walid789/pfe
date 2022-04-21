@@ -20,4 +20,16 @@ export class AppServiseService {
   DeletPanier(data:any){
     return this.http.post('/api/DeletPanier/',data)
   }
+  modifierPanier(data:any){
+    return this.http.put('/api/UpdateProduit/',data)
+  }
+  getCommande(){
+    return this.http.get('/api/getCommande')
+  }
+  getuserById(data:any){
+    return this.http.post('/api/getUserById',data)
+  }
+  getProduit(data:any){
+    return this.http.post('/api/getProduitById',data)
+  }
 }

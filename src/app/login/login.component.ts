@@ -30,7 +30,7 @@ this.servise.getUser(this.user).subscribe((Response)=>{
  
   this.donne=Response;
   if (this.donne.length!=0){
-    if(this.donne[0].mail=="admin@gmail.com" && this.donne[0].pass_word=="admin123" ){
+    if(this.donne[0].mail=="admin@gmail.com" ){
       this.router.navigate(['/dashbord']);
   
     }
