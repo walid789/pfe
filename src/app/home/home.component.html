@@ -9,7 +9,7 @@
 
 <div class="row text-center">  
 <ng-container  *ngFor="let d of donne ;let i=index ">
-    <ng-container  *ngIf="d.categorie=='decoration 'and i<=2">
+    <ng-container  *ngIf="d.categorie=='decoration'">
     <div class="col-4">
         <app-welcome [dat]="d"></app-welcome>
     </div>
@@ -28,12 +28,12 @@
 
 <div class="row text-center">  
 <ng-container  *ngFor="let d of donne ;let i=index">
-    <ng-container  *ngIf="d.categorie=='meuble '">
-    <ng-container *ngIf="i<5">
+    <ng-container  *ngIf="d.categorie=='meuble'">
+   
     <div class="col-4">
         <app-welcome [dat]="d"></app-welcome>
     </div>
-    </ng-container>
+   
     </ng-container>
 </ng-container>
     </div>
@@ -51,7 +51,7 @@
 
 <div class="row text-center">  
 <ng-container  *ngFor="let d of donne ;let i=index">
-    <ng-container  *ngIf="d.categorie=='vetement 'and i<=2">
+    <ng-container  *ngIf="d.categorie=='vetement'and i<=2">
       
 
     <div class="col-4">
@@ -76,8 +76,8 @@
     <h2 class="text-center pt-5 pb-5 titre3">Accessoires</h2>
 
 <div class="row text-center">  
-<ng-container  *ngFor="let d of donne;let i=index ">
-    <ng-container  *ngIf="d.categorie=='accessoire ' and i<=2">
+<ng-container  *ngFor="let d of donne;">
+    <ng-container  *ngIf="d.categorie=='accessoire' ">
    
 
     <div class="col-4">

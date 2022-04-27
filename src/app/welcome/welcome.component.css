@@ -12,9 +12,9 @@ font-weight: bold;
 }
 
 .hero{
-    width: 300px;
+    width: 220px;
     object-fit: cover;
-    height: 250px;
+    height: 220px;
     opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;

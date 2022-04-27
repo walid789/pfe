@@ -26,7 +26,6 @@ export class PanierComponent implements OnInit {
     this.service.getPanier(this.data).subscribe((Response)=>{
       console.log("reponse from api",Response)
       this.donne=Response;
-    
       for (let entry of this.donne) {
         this.nbcommande++;
         this.nbtotal=this.nbtotal+entry.prix;
@@ -34,6 +33,19 @@ export class PanierComponent implements OnInit {
     },(error)=>{console.log("eroor is ",error)}
     )
    
+      }
+      ajouterCommande(){
+        for (let i=0;i<this.donne.length;i++){
+          this.data={
+            id_user:this.donne[i].id_user,
+            quantite:this.donne[i].quantite,
+            id_produit:this.donne[i].id_produit,
+
+          }
+          this.service.AddCommande(this.data).subscribe((Response)=>{
+          },(error)=>{console.log("eroor is ",error)}
+          ) 
+        }
       }
 
 supp(){
@@ -46,6 +58,18 @@ supp(){
       console.log("reponse from api",Response)
     },(error)=>{console.log("eroor is ",error)}
     )
-    location.reload();  
+    window.location.reload();
 }
+
+
+
+displayStyle = "none";
+  openPopup() {
+    this.displayStyle = "block";
+  }
+
+  closePopup() {
+    this.displayStyle = "none";
+  }
+
 }

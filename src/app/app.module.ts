@@ -32,6 +32,12 @@ import { TabProduitComponent } from './tab-produit/tab-produit.component';
 import { TabCommandeComponent } from './tab-commande/tab-commande.component';
 
 
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { FullChartComponent } from './full-chart/full-chart.component';
+import { DountComponent } from './dount/dount.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -57,6 +63,9 @@ import { TabCommandeComponent } from './tab-commande/tab-commande.component';
     ModifierComponent,
     TabProduitComponent,
     TabCommandeComponent,
+    FullChartComponent,
+    DountComponent,
+    
     
 
 
@@ -68,7 +77,7 @@ import { TabCommandeComponent } from './tab-commande/tab-commande.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgxChartsModule
+    NgApexchartsModule
 
 
 

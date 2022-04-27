@@ -7,10 +7,22 @@ import { AppServiseService } from '../app-servise.service';
 })
 export class TabProduitComponent implements OnInit {
 donne:any;
+data:any;
   constructor(private service:AppServiseService) { }
 
   ngOnInit(): void {
     this.getDataFromAPI();
+  }
+
+
+  detetProduit(id:any){
+    this.data={
+      id:id
+    }
+    this.service.DeletProduit(this.data).subscribe((Response)=>{
+    },(error)=>{console.log("eroor is ",error)}
+    )
+    this.ngOnInit();
   }
 
 

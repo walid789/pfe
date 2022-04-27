@@ -32,4 +32,19 @@ export class AppServiseService {
   getProduit(data:any){
     return this.http.post('/api/getProduitById',data)
   }
+  updateCommande(data:any){
+    return this.http.put('/api/UpdateCommande',data)
+  }
+  DeletCommande(data:any){
+    return this.http.post('/api/DeletCommande/',data)
+  }
+  DeletProduit(data:any){
+    return this.http.post('/api/DeletProduit/',data)
+  }
+  UpdateStockProduit(data:any){
+    return this.http.put('/api//UpdateStockProduit',data)
+  }
+  AddCommande(data:any){
+    return this.http.post('/api//addCommande/',data)
+  }
 }

@@ -65,12 +65,11 @@ export class DetaileComponent implements OnInit {
        };
        console.log(this.panier) 
         this.service1.ajouterPanier(this.panier).subscribe((Response)=>{
-          console.log("panier ajouter")
-          this.router.navigate(['/panier']);
+        
          },(error)=>{console.log("eroor is ",error)}
        
          )
-         this.router.navigate(['/panier']);
+       
       }
 
 }

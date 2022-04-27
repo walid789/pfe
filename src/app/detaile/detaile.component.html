@@ -38,10 +38,21 @@
         <div class="titre1 pt-3">PRODUCT MATERIALS</div>
         <div class="pt-3">{{t.matriel}}</div>
         <div class="d-flex flex-row">
-          <div class="p-2"><img src={{t.sous_image1}} class="sous_image" (mouseover)="changer(t.sous_image1)"></div>
-          <div class="p-2"><img src={{t.sous_image2}} class="sous_image" (mouseover)="changer(t.sous_image2)"></div>
-          <div class="p-2"><img src={{t.sous_image3}} class="sous_image" (mouseover)="changer(t.sous_image3)"></div>
-          <div class="p-2"><img src={{t.sous_image4}} class="sous_image" (mouseover)="changer(t.sous_image4)"></div>
+          <div *ngIf="t.sous_image1!=''">
+            <div class="p-2"><img src={{t.sous_image1}} class="sous_image" (mouseover)="changer(t.sous_image1)"></div>
+          </div>
+          <div *ngIf="t.sous_image2!=''">
+            <div class="p-2"><img src={{t.sous_image2}} class="sous_image" (mouseover)="changer(t.sous_image2)"></div>
+          </div>
+          <div *ngIf="t.sous_image3!=''">
+            <div class="p-2"><img src={{t.sous_image3}} class="sous_image" (mouseover)="changer(t.sous_image3)"></div>
+          </div>
+          <div *ngIf="t.sous_image4!=''">
+            <div class="p-2"><img src={{t.sous_image4}} class="sous_image" (mouseover)="changer(t.sous_image4)"></div>
+          </div>
+        
+
+        
         </div>
        </div>
         </div>

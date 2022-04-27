@@ -13,9 +13,15 @@ export class RegistreComponent implements OnInit {
   password:string='';
   user:any;
   constructor(private service:AjouterService) { }
-
   ngOnInit(): void {
- 
+  }
+  displayStyle = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
   }
   ajouter(){
     this.user = 

@@ -1,19 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import {
+  ChartComponent,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexXAxis,ApexTitleSubtitle} from "ng-apexcharts";
+  export type ChartOptions = {
+    series: ApexAxisChartSeries;
+    chart: ApexChart;
+    xaxis: ApexXAxis;
+    title: ApexTitleSubtitle;
+  };
 @Component({
   selector: 'app-dashbord',
   templateUrl: './dashbord.component.html',
   styleUrls: ['./dashbord.component.css']
 })
 export class DashbordComponent implements OnInit {
-  saleData = [
-    { name: "Mobiles", value: 105000 },
-    { name: "Laptop", value: 55000 },
-    { name: "AC", value: 15000 },
-    { name: "Headset", value: 150000 },
-    { name: "Fridge", value: 20000 },
-    { name: "exmple", value: 20000 }
-  ];
-  constructor() { }
+ /* @ViewChild("chart") chart: ChartComponent;
+  public chartOptions: Partial<ChartOptions>;*/
+  chartOptions:any;
+
+  constructor() { 
+    
+    this.chartOptions = {
+      series: [
+        {
+          name: "My-series",
+          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: "bar"
+      },
+      title: {
+        text: "My First Angular Chart"
+      },
+      xaxis: {
+        categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
+      }
+    };
+  }
 
   ngOnInit(): void {
 

@@ -12,10 +12,28 @@ export class LoginComponent implements OnInit {
 mail:string="";
 pass:string="";
 user:any;
-donne:any
+donne:any;
+valid:any;
+invalid:any;
   constructor(private servise:AppServiseService,private router:Router) { }
 
   ngOnInit(): void {
+    
+  }
+  displayStyle = "none";
+  displayStyle1 = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  openPopup1() {
+    this.displayStyle1 = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
+  closePopup1() {
+    this.displayStyle1 = "none";
     
   }
 
@@ -25,20 +43,19 @@ this.user={
   mail:this.mail,
   pass:this.pass
 }
-console.log(this.user)
+//console.log(this.user)
 this.servise.getUser(this.user).subscribe((Response)=>{
- 
   this.donne=Response;
   if (this.donne.length!=0){
     if(this.donne[0].mail=="admin@gmail.com" ){
       this.router.navigate(['/dashbord']);
-  
     }
    sessionStorage.setItem("email",this.mail.toString());
    sessionStorage.setItem("id",this.donne[0].id.toString());
-   /*this.router.navigate(['/accueil']);*/
+   this.router.navigate(['/accueil']);
   }
   else{
+    this.valid=false;
     console.log("erure ")
   }
   

@@ -33,7 +33,7 @@ font-weight: bold;
   }
  .img1{
      object-fit: cover;
-     height: 400px;
+     height: 300px;
      width: 100%;
      object-position: top;
      margin-top: 80px;
@@ -41,7 +41,7 @@ font-weight: bold;
  }
  .img2{
     object-fit: cover;
-    height: 400px;
+    height: 300px;
     width: 100%;
     object-position: center;
     margin-top: 80px;

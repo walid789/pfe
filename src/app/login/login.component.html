@@ -2,22 +2,83 @@
 <div class="container">
     <h2 class="text-center pt-5 pb-5 titre3">CUSTOMER ZONE</h2>
     
-  
+    
         <div class="par5" >Email address</div>
         <div class="form-group col-6 ">
             <input type="email" [(ngModel)] = "mail" class="form-control ml-0 "  >
           </div>
           <div class="par5">Password</div>
           <div class="form-group col-6 ">
-              <input type="password" [(ngModel)]= "pass" class="form-control ml-0" [ngModelOptions]="{standalone: true}"  >
+              <input type="password" [(ngModel)]= "pass" class="form-control ml-0"  >
+              <div *ngIf="valid==false">
+                <div class=" p-2 mt-3 " style="color: #B26C30;background-color: #FDE6D8;"  >
+                  Mail or password are inncorect 
+           </div>
+              </div>
             </div>
             <button type="button"  class="btn1" (click)="verif()">LOG IN</button>
-            <div class="par4 pt-3" > froget your password ?</div>
+            <div class="par4 pt-3" (click)="openPopup()"> froget your password ?</div>
             <div class="par4" [routerLink]="['/signup']"> Not our registered customer yet?</div>
 
+       <!--modal for forget password -->
+       <div
+       class="modal "
+       [ngStyle]="{'display':displayStyle}">
+       <div class=" modal-dialog modal-dialog-centered" >
+         <div class="modal-content" style="background-color: rgb(235, 235, 235);">
+         <div class="modal-header" style="background-color: #0069D9" >
+           <h5 class="modal-title" style="color: white;">Pleaase entre your email adresse to send the password </h5>
+         </div>
+         <div class="modal-body">
+           <div class="form-group">
+       <p>Your Email</p>
+             <input class="form-control" id="message-text" >
+           </div>
        
-        
-      
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-primary" (click)="openPopup1();closePopup()">Send</button>
+           <button type="button" class="btn btn-danger"
+               (click)="closePopup()">
+           Close
+           </button>
+         
+         </div>
+         </div>
+       </div>
+       </div>
+
+<!--modal succes password-->
+       <div
+       class="modal "
+       [ngStyle]="{'display':displayStyle1}">
+       <div class=" modal-dialog modal-dialog-centered" >
+         <div class="modal-content" >
+         <div class="modal-header" style="background-color: #3FC59D;" >
+          
+           <img src="assets\image\accept.png" class=" imgsucces">
+           
+          <!-- <h4 class="modal-title">succes </h4>-->
+         </div>
+         <div class="modal-body">
+           <div class="form-group">
+       <h2  class="text-center">Succes </h2>
+           <h5 class="text-center">Email has send succefuly </h5>
+           </div>
+       
+         </div>
+         <div class="modal-footer text-center">
+          
+           <button type="button" class="btn btn-danger"
+               (click)="closePopup1()">
+           Close
+           </button>
+         
+         </div>
+         </div>
+       </div>
+       </div>
+
 </div>
 
 

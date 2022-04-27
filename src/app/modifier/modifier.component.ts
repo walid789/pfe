@@ -64,8 +64,7 @@ export class ModifierComponent implements OnInit {
   alert("produit modifier")
    }
 
-
-
+   
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params['id'];
     this.getDataFromAPI(this.id);
@@ -77,11 +76,16 @@ export class ModifierComponent implements OnInit {
       this.donne=Response;
    
       this.url=this.donne[0].image;
-      
       this.url1=this.donne[0].sous_image1;
       this.url2=this.donne[0].sous_image2;
       this.url3=this.donne[0].sous_image3;
       this.url4=this.donne[0].sous_image4;
+      //reasniler les image 
+      this.image=this.url;
+      this.image1=this.url1;
+      this.image2=this.url2;
+      this.image3=this.url3;
+      this.image4=this.url4;
       this.name=this.donne[0].nom;
       this.prix=this.donne[0].prix;
       this.dim=this.donne[0].dim;
@@ -138,27 +142,27 @@ export class ModifierComponent implements OnInit {
     if (ch=="fileInput"){
        imageblob=this.fileInput.nativeElement.files[0];
        var tab= this.Concat(imageblob);
-       this.url="\\assets\\image\\"+tab[0]+'.'+tab[1];
+       this.url="\\assets\\image\\"+tab[1]+'.'+tab[0];
     }
     if(ch=="fileInput1"){
       imageblob=this.fileInput1.nativeElement.files[0];
       var tab= this.Concat(imageblob);
-      this.url1="\\assets\\image\\"+tab[0]+'.'+tab[1];
+      this.url1="\\assets\\image\\"+tab[1]+'.'+tab[0];
     }
     if(ch=="fileInput2"){
       imageblob=this.fileInput2.nativeElement.files[0];
       var tab= this.Concat(imageblob);
-      this.url2="\\assets\\image\\"+tab[0]+'.'+tab[1];
+      this.url2="\\assets\\image\\"+tab[1]+'.'+tab[0];
     }
     if(ch=="fileInput3"){
       imageblob=this.fileInput3.nativeElement.files[0];
       var tab= this.Concat(imageblob);
-      this.url3="\\assets\\image\\"+tab[0]+'.'+tab[1];
+      this.url3="\\assets\\image\\"+tab[1]+'.'+tab[0];
     }
     if(ch=="fileInput4"){
       imageblob=this.fileInput4.nativeElement.files[0];
       var tab= this.Concat(imageblob);
-      this.url4="\\assets\\image\\"+tab[0]+'.'+tab[1];
+      this.url4="\\assets\\image\\"+tab[1]+'.'+tab[0];
     }
 
     const file =new FormData();

@@ -12,7 +12,7 @@
         </p>
         </div>
         <div class="p-2">
-            <a href="/panier">   <button type="button"  class="btn1"> CHEKOUT</button></a>
+           <button type="button"  class="btn1" (click)="ajouterCommande();openPopup()"> CHEKOUT</button>
         </div>
        
 
@@ -33,7 +33,7 @@
                   </div>
                 </div>
            
-                  <div class="titre1 pt-3">PRODUCT DIMENSIONS</div>
+                  <div class="titre1 pt-1">PRODUCT DIMENSIONS</div>
                   <div class="pt-2">{{t.dim}}</div>
                   <div class="titre1 pt-3">PRODUCT MATERIALS</div>
                   <div class="pt-2">{{t.matriel}}</div>
@@ -58,7 +58,36 @@
         
       </ng-container>
     
+<!--modal send suucefuly-->
+<div
+class="modal "
+[ngStyle]="{'display':displayStyle}">
+<div class=" modal-dialog modal-dialog-centered" >
+  <div class="modal-content" >
+  <div class="modal-header" style="background-color: #3FC59D;" >
+   
+    <img src="assets\image\accept.png" class=" imgsucces">
 
+    <!-- <h4 class="modal-title">succes </h4>-->
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+<h2  class="text-center">Succes </h2>
+    <h5 class="text-center pt-4">Panier Add succefuly we are conncter you with the phone </h5>
+    </div>
+
+  </div>
+  <div class="modal-footer text-center">
+   
+    <button type="button" class="btn btn-danger"
+        (click)="closePopup()">
+    Close
+    </button>
+  
+  </div>
+  </div>
+</div>
+</div>
 </div>
 <app-footers></app-footers>
 

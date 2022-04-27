@@ -1,29 +1,82 @@
 <app-nav></app-nav>
 <div class="container">
     <h2 class="text-center pt-5 pb-5 titre3">CUSTOMER ZONE</h2>
-    <div class="par5" >Name</div>
-            <div class="form-group col-6 ">
-                <input type="text" #objet class="form-control ml-0 " id="inputobjet"[(ngModel)] = "name" >
-              </div>
-  
-        <div class="par5" >Phone Number</div>
-        <div class="form-group col-6 ">
-            <input type="phone"    class="form-control ml-0 " id="inputobjet"[(ngModel)] = "phone" >
-          
+    <div class="row">
+      <div class="col-6">
+        <div class="par5" >Name</div>
+        <div class="form-group col-12">
+            <input type="text" class="form-control ml-0 " rows="3"[(ngModel)] = "name" >
           </div>
-          <div class="par5" >Email address</div>
-          <div class="form-group col-6 ">
-              <input type="email" class="form-control ml-0 " id="inputobjet"[(ngModel)] = "email" >
-            </div>
-          <div class="par5">Password</div>
-          <div class="form-group col-6 ">
-              <input type="password" #objet class="form-control ml-0" id="inputobjet" [(ngModel)] = "password" >
-            </div>
-            
-            
-            <button   class="btn1 "  (click)="ajouter()" >REGISTRE</button>
-           
+      </div>
+      <div class="col-6">
+        <div class="par5" >Phone Number</div>
+        <div class="form-group col-12 ">
+            <input type="phone"    class="form-control ml-0 " id="inputobjet"[(ngModel)] = "phone" >
+      </div>
+    </div>
+   <div class="col-6">
+    <div class="par5" >Email address</div>
+    <div class="form-group col-12 ">
+        <input type="email" class="form-control ml-0 " id="inputobjet"[(ngModel)] = "email" >
+      </div>
+   </div>
+   <div class="col-6">
+    <div class="par5">Password</div>
+    <div class="form-group col-12 ">
+        <input type="password"  class="form-control ml-0" id="inputobjet" [(ngModel)] = "password" >
+      </div>
+   </div>
+  <div class="col-12">
+    <div class="par5">Adresse</div>
+    <div class="form-group col-12 ">
+        <textarea   class="form-control ml-0" rows="3"  >
+        </textarea>
+      </div>
 
+  </div>
+      
+          </div>
+         
+        
+            
+            
+            <button   class="btn1 "  (click)="openPopup()" >REGISTRE</button>
+           <!---
+            <h3>Please click on the below button open popup</h3>
+            <hr />
+            <button
+            style="margin: 50px; padding: 10px"
+            type="button"
+            class="btn btn-primary"
+            (click)="openPopup()">Show Data
+            </button>-->
+            <div
+            class="modal "
+            [ngStyle]="{'display':displayStyle}">
+            <div class=" modal-dialog modal-dialog-centered" >
+              <div class="modal-content" style="background-color: rgb(235, 235, 235);">
+              <div class="modal-header" >
+                <h4 class="modal-title">Verification Code Has Send to Your Email </h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="message-text"  class="col-form-label">Code (6 Number)</label>
+                  <input class="form-control" id="message-text" >
+                </div>
+            
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Verifie</button>
+                <button type="button" class="btn btn-danger"
+                    (click)="closePopup()">
+                Close
+                </button>
+              
+              </div>
+              </div>
+            </div>
+            </div>
+        
       
 </div>
 

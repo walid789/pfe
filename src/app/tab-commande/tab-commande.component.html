@@ -90,24 +90,22 @@
                         {{donne[i].quantite * b[0][0].prix}}
                     </td>
                     <td >
+                     
                         <div class="dropdown">
                             <span class="dote">...</span>
                             <div class="dropdown-content"> 
                                 <a  href="#" class="c5">View en detail </a>
 
-                                <br>  <a  href="#" class="c5">succes </a>
-                                <br>  <a  href="#" class="c5">pannding</a>
-                                <br>  <a  href="#" class="c5">blocked</a>
+                                <br>  <a  (click)="UpdatePayment('Success',donne[i].id,b[0][0].id,donne[i].quantite)" class="c5">Success </a>
+                                <br>  <a  (click)="UpdatePayment('Pending',donne[i].id,b[0][0].id,donne[i].quantite)" class="c5">Pending</a>
+                                <br>  <a  (click)="UpdatePayment('Blocked',donne[i].id,b[0][0].id,donne[i].quantite)" class="c5">Blocked</a>
                                 
                 
                             <div class="dropdown-divider"></div>
-                                <a  href="#" class="c4">Delete</a>
-                                
-                        
-                            
-
+                                <a  (click)="deletCommande(donne[i].id)" class="c4">Delete</a>
                                 </div>
                         </div>
+                   
                         </td>
                 </tr>
                
