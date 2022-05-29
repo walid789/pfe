@@ -35,6 +35,7 @@ import { TabCommandeComponent } from './tab-commande/tab-commande.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { FullChartComponent } from './full-chart/full-chart.component';
 import { DountComponent } from './dount/dount.component';
+import { ColumnsChartComponent } from './columns-chart/columns-chart.component';
 
 
 
@@ -65,6 +66,7 @@ import { DountComponent } from './dount/dount.component';
     TabCommandeComponent,
     FullChartComponent,
     DountComponent,
+    ColumnsChartComponent,
     
     
 

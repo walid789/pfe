@@ -3,9 +3,9 @@
  
                     <div class="card  border-0 rounded ">
                         <div class="card-header border-0" style="background-color: white;" >
-                            <div class="row">
-                            <h4 class="card-title mt-0 col-8"> Produit</h4>
-                                <button type="button" class="btn btn-outline-primary mt-0 col-3" routerLink="/dashbord/ajouter" ><i class="fa fa-plus"></i> Add</button>
+                            <div class="d-flex justify-content-between ">
+                         <div class="mt-3">   <h4 style="font-weight: bold"> Liste of product</h4></div>
+                                <button type="button" class="btn btn-outline-primary mt-4  col-3" style="height: 50px;font-weight: bold;" routerLink="/dashbord/ajouter" ><i class="fa fa-plus mr-3"></i> Add</button>
 
 </div>          
 
@@ -40,10 +40,10 @@
                 </thead>
                
                     <tbody>
-                        <ng-container *ngFor="let t of donne">
+                        <ng-container *ngFor="let t of tab_produit ">
                      
                         <tr>
-                            <td>
+                            <td style="cursor: pointer;" [routerLink]="['/produit',t.id]">
                         <div class="row">
                         <div class="col-4">
                            
@@ -79,16 +79,35 @@
                     </td>
                     <td>
                     <div class="row">                                               
-                        <button class="btn2 btn-outline-warning " routerLink="/modifier/{{t.id}}"><i class="fa fa-refresh" ></i></button>
-                        <button class="btn3 btn-outline-danger" (click)="detetProduit(t.id)"><i class="fa fa-trash"></i></button>
+                        <button class="btn2 btn-outline-warning " routerLink="/modifier/{{t.id}}"><i class="fa fa-refresh"  ></i></button>
+                        <button class="btn2 btn-outline-danger" (click)="detetProduit(t.id)"><i class="fa fa-trash" ></i></button>
                         
                         </div>
                     </td>
+                    
                 </tr>
                 
             </ng-container>
-            
+ 
             </tbody>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-info btn-sm " style="margin-right: 5px" (click)="preview()">Preview</button>
+                    <button type="button" class="btn btn-primary btn-sm"    (click)="next()">   Next   </button>
+                  
+                </td>
+
+                
+            </tr>
             
         </table>
                     </div>

@@ -91,7 +91,7 @@ export class ModifierComponent implements OnInit {
       this.dim=this.donne[0].dim;
       this.mat=this.donne[0].matriel;
       this.selcted=this.donne[0].categorie;
-      this.quanite=this.donne[0].stoke;
+      this.quanite=this.donne[0].quanite;
 
     },(error)=>{console.log("eroor is ",error)}
     )

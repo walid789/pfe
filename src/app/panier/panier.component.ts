@@ -36,11 +36,12 @@ export class PanierComponent implements OnInit {
       }
       ajouterCommande(){
         for (let i=0;i<this.donne.length;i++){
+          const now = new Date();
           this.data={
             id_user:this.donne[i].id_user,
             quantite:this.donne[i].quantite,
             id_produit:this.donne[i].id_produit,
-
+            date:now.toLocaleDateString()
           }
           this.service.AddCommande(this.data).subscribe((Response)=>{
           },(error)=>{console.log("eroor is ",error)}

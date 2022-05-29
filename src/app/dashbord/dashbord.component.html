@@ -14,14 +14,14 @@
         <div class="row ">
         
         <div class="col-4 titre1">
-            <div class="mt-3">today visite</div>
-        <div class="mt-3"><b style="font-size: 25px;">54584</b></div>
+            <div class="mt-3">today new users</div>
+        <div class="mt-3"><b style="font-size: 25px;">{{nbUsers}}</b></div>
         </div>
         <div class="col-4 titre1">
             <div class="mt-3">Today’s total sales
         
             </div>
-        <div class="mt-3"><b style="font-size: 25px;" >54584</b></div>
+        <div class="mt-3"><b style="font-size: 25px;" >{{nbSales}}</b></div>
         </div>
         <div class="col-4 ">
         
@@ -35,12 +35,10 @@
 
         <div class="row pt-3  ">
         
-            <div class="pp1 col-6 p-2 " style="color: #B26C30;"  >
+            <div class="pp1 col-12 p-2 " style="color: #B26C30;"  >
                 <b >5 products</b> didn’t publish to your Facebook page
          </div>
-         <div class="href1 col-6  ">
-        
-            <a href=""> View products  </a>   </div>
+      
             <hr class="ligne"/>
         </div>
         
@@ -50,9 +48,7 @@
                 <b >7 orders</b> have payments that need to be captured
         
             </div>
-         <div class=" href2 col-6 p-2  ">
-        
-            <a href="">View payments </a>     </div>
+
             <hr class="ligne"/>
         </div>
         
@@ -63,12 +59,6 @@
             <b > 50+ orders </b> to be fulfilled
         
         </div>
-        <div class="href3 col-6  ">
-        
-        
-            <a href="" class="p-2">View orders  </a>  
-        
-          </div>
           <hr class="ligne"/>
         
         
@@ -78,8 +68,11 @@
         </div>
     </div>
         <div class="row">
-            <div class="col-6">
+            <!--<div class="col-5">
                 <app-dount></app-dount>
+            </div>-->
+            <div class="col-12">
+                <app-columns-chart></app-columns-chart>
             </div>
         </div>
         
@@ -91,8 +84,10 @@
 
     <app-tab-produit></app-tab-produit>
 
-    
-            <app-full-chart></app-full-chart>
+ 
+            <app-dount></app-dount>
+  
+  
 
     
  

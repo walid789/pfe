@@ -92,15 +92,14 @@
                     <td >
                      
                         <div class="dropdown">
-                            <span class="dote">...</span>
+                            <span class="dote">...</span><!--[routerLink]="['/produit',t.id]"-->
                             <div class="dropdown-content"> 
-                                <a  href="#" class="c5">View en detail </a>
+                                <a  href="/produit/{{b[0][0].id}}" class="c5">View en detail </a>
 
                                 <br>  <a  (click)="UpdatePayment('Success',donne[i].id,b[0][0].id,donne[i].quantite)" class="c5">Success </a>
                                 <br>  <a  (click)="UpdatePayment('Pending',donne[i].id,b[0][0].id,donne[i].quantite)" class="c5">Pending</a>
                                 <br>  <a  (click)="UpdatePayment('Blocked',donne[i].id,b[0][0].id,donne[i].quantite)" class="c5">Blocked</a>
-                                
-                
+
                             <div class="dropdown-divider"></div>
                                 <a  (click)="deletCommande(donne[i].id)" class="c4">Delete</a>
                                 </div>
@@ -110,7 +109,6 @@
                 </tr>
                
                 </ng-container>
-          
             </tbody>
             <tr>
                 <td>
@@ -123,12 +121,24 @@
                     
                 </td>
                 <td>
-                    <button type="button" class="btn1 btn-primary btn-sm">Preview</button>
+                    <ng-container *ngIf="dis1==true">
+                        <button type="button" class="btn1 btn-outline-primary btn-sm" disabled (click)="preview()">Preview</button>
+                    </ng-container>
+                    <ng-container *ngIf="dis1==false">
+                        <button type="button" class=" btn btn-outline-primary btn-sm"  (click)="preview()">Preview</button>
+                    </ng-container>
+                    
+                    
 
                 </td>
                 <td>
-                    <button type="button" class="btn btn-primary btn-sm">   Next   </button>
-
+                    <ng-container *ngIf="dis==true">
+  
+                    <button type="button" class="btn1 btn-primary btn-sm" disabled (click)="next()">   Next   </button>
+                    </ng-container>
+                    <ng-container *ngIf="dis==false">
+                        <button type="button" class=" btn btn-primary btn-sm"  (click)="next()">   Next   </button>
+                        </ng-container>
                 </td>
 
                 

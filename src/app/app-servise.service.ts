@@ -17,6 +17,9 @@ export class AppServiseService {
   getUser(data:any){
     return this.http.post('/api/getUser/',data)
   }
+  getAllUser(){
+    return this.http.get('/api/getAllUser/')
+  }
   DeletPanier(data:any){
     return this.http.post('/api/DeletPanier/',data)
   }
@@ -25,6 +28,9 @@ export class AppServiseService {
   }
   getCommande(){
     return this.http.get('/api/getCommande')
+  }
+  getBestSales(){
+    return this.http.get('/api/getBestSales')
   }
   getuserById(data:any){
     return this.http.post('/api/getUserById',data)
@@ -46,5 +52,8 @@ export class AppServiseService {
   }
   AddCommande(data:any){
     return this.http.post('/api//addCommande/',data)
+  }
+  FrogetPassword(data:any){
+    return this.http.post('/api/FrogetPassword',data)
   }
 }

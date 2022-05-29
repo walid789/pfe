@@ -29,12 +29,12 @@ export class FullChartComponent implements OnInit {
     this.chartOptions = {
       series: [
         {
-          name: "series1",
-          data: [31, 40, 28, 51, 42, 109, 100]
+          name: "This Year",
+          data: [31, 40, 28, 51, 42, 109, 100, 42, 109, 100,40,30]
         },
         {
-          name: "series2",
-          data: [11, 32, 45, 32, 34, 52, 41]
+          name: "Last Year",
+          data: [11, 32, 45, 32, 34, 52, 41,34, 52, 41,30,50]
         }
       ],
       chart: {
@@ -48,20 +48,21 @@ export class FullChartComponent implements OnInit {
         curve: "smooth"
       },
       xaxis: {
-        type: "datetime",
+        type: "date",
         categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z"
+          "January", 
+          "February",
+          " March",
+           "April", 
+           "May",
+            "June", 
+            "July", "August", "September", "October", "November" , "December"
+
         ]
       },
       tooltip: {
         x: {
-          format: "dd/MM/yy HH:mm"
+      
         }
       }
     };
@@ -70,7 +71,7 @@ export class FullChartComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public generateData(baseval:any, count:any, yrange:any) {
+ /* public generateData(baseval:any, count:any, yrange:any) {
     var i = 0;
     var series = [];
     while (i < count) {
@@ -84,6 +85,5 @@ export class FullChartComponent implements OnInit {
       i++;
     }
     return series;
-  }
-
+  }*/
 }

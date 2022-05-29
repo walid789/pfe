@@ -1,14 +1,14 @@
 
 .box{
     position: absolute;
-    top:180%;
+    top:160%;
     left:40%;
     right: 17%;
 }
 
 .img{
     position: absolute;
-    top: 110%;
+    top: 98%;
     object-fit: cover;
     height: 300px;
     width: 70%;

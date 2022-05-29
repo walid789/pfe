@@ -1,48 +1,55 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import {
-  ChartComponent,
-  ApexAxisChartSeries,
-  ApexChart,
-  ApexXAxis,ApexTitleSubtitle} from "ng-apexcharts";
-  export type ChartOptions = {
-    series: ApexAxisChartSeries;
-    chart: ApexChart;
-    xaxis: ApexXAxis;
-    title: ApexTitleSubtitle;
-  };
+import { AppServiseService } from '../app-servise.service';
 @Component({
   selector: 'app-dashbord',
   templateUrl: './dashbord.component.html',
   styleUrls: ['./dashbord.component.css']
 })
 export class DashbordComponent implements OnInit {
- /* @ViewChild("chart") chart: ChartComponent;
-  public chartOptions: Partial<ChartOptions>;*/
-  chartOptions:any;
 
-  constructor() { 
+  donne:any;
+  nbSales:number=0;
+  nbUsers:number=0;
+
+  constructor(private servise:AppServiseService) { 
     
-    this.chartOptions = {
-      series: [
-        {
-          name: "My-series",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-        }
-      ],
-      chart: {
-        height: 350,
-        type: "bar"
-      },
-      title: {
-        text: "My First Angular Chart"
-      },
-      xaxis: {
-        categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
-      }
-    };
+   
   }
 
   ngOnInit(): void {
-
+   this.getDataFromAPI()
   }
+  getDataFromAPI(){
+    this.servise.getCommande().subscribe((Response)=>{
+      this.donne=Response;
+      const now = new Date();
+      for(let i=0;i<this.donne.length;i++){
+    if (this.donne[i].date==now.toLocaleDateString()){
+      this.nbSales++;
+    }
+   
+
+         }
+    }
+    ,(error)=>{console.log("eroor is ",error)}
+    );
+    this.servise.getAllUser().subscribe((Response)=>{
+      this.donne=Response;
+      const now = new Date();
+      for(let i=0;i<this.donne.length;i++){
+    if (this.donne[i].date==now.toLocaleDateString()){
+      this.nbSales++;
+    }
+   
+
+         }
+    }
+    ,(error)=>{console.log("eroor is ",error)}
+    )
+
+ 
+ 
+    
+  
+}
 }
