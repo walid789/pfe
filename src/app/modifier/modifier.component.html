@@ -41,6 +41,7 @@
         <div class="form-group">
     <label class="par5">Chosir Un categorie</label>
     <select class="form-control" (change)="onChange($event.target)">
+      <option >choisire option  </option>
       <option >vetement </option>
       <option >meuble </option>
       <option>decoration </option>
@@ -114,7 +115,6 @@
 </div>
 </div>
             <br>
-            <button   class="btn1 " (click)=" modifierProduit()"  >modifier un Produit</button>
+            <button   class="btn1 " (click)=" modifierProduit()" routerLink="/dashbord" >modifier un Produit</button>
             <button   class="btn1 "  style="background-color: white; border: 1px solid #0069D9; color:#0069D9" routerLink="/dashbord" >Annuler</button>
-
 </div>

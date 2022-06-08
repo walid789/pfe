@@ -41,7 +41,8 @@
         <div class="form-group">
     <label class="par5">Chosir Un categorie</label>
     <select class="form-control" (change)="onChange($event.target)">
-      <option>vetement </option>
+      <option >choisire option  </option>
+      <option >vetement </option>
       <option >meuble </option>
       <option>decoration </option>
   <option>accessoire </option>
@@ -114,7 +115,7 @@
 </div>
 </div>
             <br>
-            <button   class="btn1 " (click)="ajouterProduit()"  >Ajouter un Produit</button>
+            <button   class="btn1 " (click)="ajouterProduit()"  routerLink="/dashbord" >Ajouter un Produit</button>
             <button   class="btn1 "  style="background-color: white; border: 1px solid #0069D9; color:#0069D9" routerLink="/dashbord" >Annuler</button>
 
 </div>

@@ -41,3 +41,10 @@ font: normal normal normal 23px/31px Segoe UI;
 .im{
     cursor: pointer;
 }
+.logo{
+margin-top:0;
+object-fit: cover;
+}
+.navbar-brand{
+    margin-top: 0;
+}

@@ -20,7 +20,6 @@ export class ModifierComponent implements OnInit {
   fileInput2!: ElementRef;
   @ViewChild('fileInput3', { static: false })
   fileInput3!: ElementRef;
- 
   @ViewChild('fileInput4', { static: false })
   fileInput4!: ElementRef;
 
@@ -57,11 +56,9 @@ export class ModifierComponent implements OnInit {
    }
    console.log(this.produit);
    this.service.modifierPanier(this.produit).subscribe((Response)=>{
-  
   },(error)=>{console.log("eroor is ",error)}
  
   )
-  alert("produit modifier")
    }
 
    

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AjouterService } from '../ajouter.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-registre',
   templateUrl: './registre.component.html',
@@ -16,6 +17,7 @@ export class RegistreComponent implements OnInit {
   e:any;
   code:any;
   n:any;
+  
   constructor(private service:AjouterService) { }
   ngOnInit(): void {
    var n=Math.floor(Math.random() * (10000) + 99999)
@@ -37,15 +39,18 @@ export class RegistreComponent implements OnInit {
       );
       
   }
+  displayStyle1="none" ;
   verife(){
     if(this.code==this.n){
        this.ajouter();
+       this.displayStyle1 = "block";
     }
       else{
         alert('code inccorect');
       }
   }
-  displayStyle = "none";
+  
+  displayStyle ="none";
   
   openPopup() {
     this.displayStyle = "block";
@@ -70,7 +75,7 @@ export class RegistreComponent implements OnInit {
   },(error)=>{console.log("eroor is ",error)}
 
   )
-
+   
   }
 
 

@@ -29,7 +29,7 @@ dis:any;
     this.service.DeletProduit(this.data).subscribe((Response)=>{
     },(error)=>{console.log("eroor is ",error)}
     )
-    this.ngOnInit();
+    window.location.reload()
   }
 
 

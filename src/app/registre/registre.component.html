@@ -35,7 +35,7 @@
 
   </div>
       
-          </div>
+       
 
             <button   class="btn1 "  (click)="openPopup()" >REGISTRE</button>
       
@@ -65,8 +65,38 @@
               </div>
             </div>
             </div>
+            <div
+            class="modal "
+            [ngStyle]="{'display':displayStyle1}">
+            <div class=" modal-dialog modal-dialog-centered" >
+              <div class="modal-content" >
+              <div class="modal-header" style="background-color: #3FC59D;" >
+               
+                <img src="assets\image\accept.png" class=" imgsucces">
+            
+                <!-- <h4 class="modal-title">succes </h4>-->
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+            <h2  class="text-center">Succes </h2>
+                <h5 class="text-center pt-4">USER add succefuly  </h5>
+                </div>
+            
+              </div>
+              <div class="modal-footer text-center">
+               
+                <button type="button" class="btn btn-success btn-lg btn-block" routerLink="/login">
+                 
+                Go To Signin Page 
+                </button>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      
         
       
-</div>
+
 
 
